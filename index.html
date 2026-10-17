@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adams Hjälptjänst – Grattis Helena!</title>
+  <meta name="description" content="En födelsedagspresent till Helena: en personlig hjälptjänst för grodor, höga hyllor, matte och filmkvällar. Betalas i fika.">
+  <meta name="theme-color" content="#2E4A33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='34' r='26' fill='%23C98A4B' stroke='%231E3324' stroke-width='4'/%3E%3Cpath d='M32 34a3 3 0 0 1 6 0a6 6 0 0 1-12 0a9 9 0 0 1 18 0a12 12 0 0 1-24 0' fill='none' stroke='%237A4A22' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Presentöppning: visas första gången sidan laddas -->
+  <div class="gift" id="gift" role="dialog" aria-modal="true" aria-labelledby="gift-title" hidden>
+    <div class="gift__inner">
+      <div class="gift__box" aria-hidden="true">
+        <div class="gift__lid"><span class="gift__bow"></span></div>
+        <div class="gift__base"></div>
+        <div class="gift__tag">
+          <span>Till: Helena</span>
+          <span>Från: Adam</span>
+        </div>
+      </div>
+      <h1 class="gift__title" id="gift-title">Ett paket till dig, Helena</h1>
+      <p class="gift__text">Den här presenten får inte plats i en låda. Öppna den ändå.</p>
+      <button class="btn btn--primary btn--lg" id="gift-open" type="button">Öppna presenten</button>
+      <button class="gift__skip" id="gift-skip" type="button">Hoppa över</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Adams Hjälptjänst, till toppen">
+        <span class="brand__mark" data-icon="hoodie" aria-hidden="true"></span>
+        <span class="brand__name">Adams Hjälptjänst</span>
+      </a>
+      <nav class="topnav" aria-label="Huvudmeny">
+        <a href="#tjanster">Tjänster</a>
+        <a href="#sa-funkar-det">Så funkar det</a>
+        <a href="#fragor">Frågor</a>
+      </nav>
+      <button class="cart-btn" id="cart-open" type="button" aria-label="Öppna varukorgen">
+        <span class="cart-btn__icon" data-icon="basket" aria-hidden="true"></span>
+        <span class="cart-btn__label">Varukorg</span>
+        <span class="cart-btn__count" id="cart-count" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="hero__kicker">Till Helena Wennstig, på födelsedagen</p>
+          <h1 class="hero__title">Grattis på födelsedagen, Helena!</h1>
+          <p class="hero__lead">
+            Din present är en egen hjälptjänst med en (1) anställd. Grodor i trädgården, burkar på
+            översta hyllan, derivator som bråkar eller en kväll som behöver en film: beställ här, så
+            kommer Adam.
+          </p>
+          <p class="hero__lead hero__lead--small">
+            Allt betalas i fika eller mat. Pengar tas inte emot.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#tjanster">Beställ hjälp</a>
+            <a class="btn btn--ghost btn--lg" href="#sa-funkar-det">Så funkar det</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__stack" id="hero-stack"></div>
+          <div class="stamp" role="img" aria-label="Presenten gäller för alltid, obegränsat antal gånger">
+            <svg class="stamp__ring" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="stamp-circle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+              <text><textPath href="#stamp-circle" textLength="272" lengthAdjust="spacing">gäller för alltid ✦ obegränsat antal gånger ✦</textPath></text>
+            </svg>
+            <span class="stamp__center" data-icon="bulle" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="sa-funkar-det" aria-labelledby="steps-title">
+      <div class="wrap">
+        <h2 class="section-title" id="steps-title">Så funkar det</h2>
+        <ol class="steps__list">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Välj tjänst</h3>
+            <p>Grodor, höga hyllor, matte eller film. Du kan beställa flera på en gång.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Anpassa</h3>
+            <p>Hur många grodor, hur högt upp, hur mycket panik. Priset räknas ut medan du väljer.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Skicka och betala i fika</h3>
+            <p>Beställningen mejlas till Adam. Betalningen sker i bullar, kaffe eller mat när jobbet är gjort.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="services" id="tjanster" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title" id="services-title">Tjänster</h2>
+          <p class="section-sub">Fyra tjänster, en hoodie. Klicka på en tjänst för att anpassa din beställning.</p>
+        </div>
+        <div class="services__grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <section class="currency" aria-labelledby="currency-title">
+      <div class="wrap currency__inner">
+        <div>
+          <h2 class="section-title" id="currency-title">Godkända betalmedel</h2>
+          <p class="section-sub">Adams Hjälptjänst tar bara betalt i sådant som går att äta eller dricka. Fikat kan bjudas hemma hos dig eller tas med till Adam.</p>
+        </div>
+        <ul class="currency__list" id="currency-list"></ul>
+        <p class="currency__no">
+          <span>Ej godkänt:</span>
+          <s>Swish</s> <s>Kort</s> <s>Kontanter</s> <s>Presentkort på ICA</s>
+        </p>
+      </div>
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title" id="reviews-title">Omdömen från berörda parter</h2>
+          <p class="section-sub">Inte alla har varit nöjda. Vi redovisar allt.</p>
+        </div>
+        <div class="reviews__grid">
+          <figure class="review">
+            <div class="review__stars" aria-label="1 av 5 stjärnor">★<span>★★★★</span></div>
+            <blockquote>”Blev avhyst från rabatten en tisdag. Mycket professionellt, men känslomässigt jobbigt.”</blockquote>
+            <figcaption><span class="review__avatar" aria-hidden="true">🐸</span>En groda, tidigare boende i trädgården</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" aria-label="5 av 5 stjärnor">★★★★★</div>
+            <blockquote>”I åratal stod jag där utan att någon nådde mig. Nu blir jag sedd.”</blockquote>
+            <figcaption><span class="review__avatar" aria-hidden="true">🫙</span>Översta hyllan i köket</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" aria-label="5 av 5 stjärnor">★★★★★</div>
+            <blockquote>”Jag har aldrig blivit så väl förklarad. Särskilt kapitel fyra.”</blockquote>
+            <figcaption><span class="review__avatar" aria-hidden="true">📘</span>Mattebok, upplaga 3</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" aria-label="4 av 5 stjärnor">★★★★<span>★</span></div>
+            <blockquote>”Väldigt mysigt. Drar av en stjärna för att hunden tog min plats.”</blockquote>
+            <figcaption><span class="review__avatar" aria-hidden="true">🛋️</span>Soffkudden till vänster</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="fragor" aria-labelledby="faq-title">
+      <div class="wrap faq__inner">
+        <h2 class="section-title" id="faq-title">Vanliga frågor</h2>
+        <div class="faq__list">
+          <details>
+            <summary>Vad händer med grodorna?</summary>
+            <p>De flyttas varsamt till en plats där de inte stör. Du väljer själv vart när du beställer. Inga grodor skadas, men en del blir förolämpade.</p>
+          </details>
+          <details>
+            <summary>Kan jag betala med pengar?</summary>
+            <p>Nej. Adams Hjälptjänst är helt fikafinansierad. Försöker du swisha skickas pengarna tillbaka tillsammans med en lapp där det står ”bulle”.</p>
+          </details>
+          <details>
+            <summary>Hur snabbt kommer Adam?</summary>
+            <p>Det beror på tjänsten. Grodlarm med nivån ”NU!!!” prioriteras före allt annat, inklusive sömn.</p>
+          </details>
+          <details>
+            <summary>Hur länge gäller presenten?</summary>
+            <p>För alltid. Det finns ingen gräns för hur många gånger du kan beställa.</p>
+          </details>
+          <details>
+            <summary>Vad händer när jag skickar en beställning?</summary>
+            <p>Din mejlapp öppnas med beställningen ifylld. Tryck på skicka där, så hamnar den hos Adam. Om ingen mejlapp öppnas kan du kopiera beställningen och skicka den som sms i stället.</p>
+          </details>
+          <details>
+            <summary>Ingår hunden på filmkvällen?</summary>
+            <p>Hundpussar ingår och kan inte väljas bort.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark" data-icon="hoodie" aria-hidden="true"></span>
+        <div>
+          <p class="footer__name">Adams Hjälptjänst</p>
+          <p>En födelsedagspresent till Helena Wennstig.<br>Ett företag med en anställd och noll vinstintresse.</p>
+        </div>
+      </div>
+      <div class="footer__terms">
+        <p class="footer__label">Villkor i korthet</p>
+        <ol>
+          <li>Grodor hanteras varsamt men bestämt.</li>
+          <li>Adam ansvarar inte för spindlar som kommer tillbaka.</li>
+          <li>Betalning sker i fika inom rimlig tid.</li>
+          <li>Presenten gäller för alltid och kan inte bytas mot pengar.</li>
+        </ol>
+      </div>
+      <div class="footer__hours">
+        <p class="footer__label">Öppettider</p>
+        <p>Alltid. Utom när Adam sover. Väck honom ändå om det gäller grodor.</p>
+        <button class="link-btn footer__replay" id="gift-replay" type="button">Öppna presenten igen</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tjänstedialog -->
+  <dialog class="sheet" id="service-dialog" aria-labelledby="sheet-title">
+    <div class="sheet__media">
+      <img id="sheet-img" alt="" width="1200" height="1607">
+    </div>
+    <div class="sheet__main">
+      <button class="icon-btn sheet__close" type="button" data-close aria-label="Stäng">
+        <span data-icon="close" aria-hidden="true"></span>
+      </button>
+      <div class="sheet__body">
+        <h2 class="sheet__title" id="sheet-title"></h2>
+        <p class="sheet__intro" id="sheet-intro"></p>
+        <div class="config" id="sheet-config"></div>
+        <div class="receipt" id="sheet-receipt"></div>
+      </div>
+      <div class="sheet__footer">
+        <div class="price" id="sheet-price" aria-live="polite"></div>
+        <div class="sheet__cta">
+          <p class="sheet__hint" id="sheet-hint" aria-live="polite"></p>
+          <button class="btn btn--primary" id="sheet-add" type="button">Lägg i varukorgen</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Varukorg och kassa -->
+  <dialog class="drawer" id="cart-dialog" aria-labelledby="drawer-title">
+    <div class="drawer__head">
+      <h2 class="drawer__title" id="drawer-title">Din beställning</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Stäng">
+        <span data-icon="close" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="drawer__body" id="drawer-body"></div>
+    <div class="drawer__foot" id="drawer-foot"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/icons.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
