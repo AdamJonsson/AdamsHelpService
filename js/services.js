@@ -135,7 +135,7 @@
   const FROG_DEST = [
     { value: 'damm', label: 'Närmaste dammen', emoji: '💧' },
     { value: 'skog', label: 'Ut i skogen', emoji: '🌲' },
-    { value: 'norrland', label: 'Långt bort, typ Norrland', emoji: '🏔️' },
+    { value: 'kiruna', label: 'Långt bort, typ Kiruna', emoji: '🏔️' },
     { value: 'granne', label: 'Grannens trädgård', emoji: '🤫' },
   ];
 
